@@ -1,7 +1,5 @@
-name: Add Rules to Cloudflare Gateway
+name: Redeploy Rules to Cloudflare Gateway
 on:
-  schedule:
-    - cron: "0 * * * *"
   workflow_dispatch:
 jobs:
   run:
@@ -38,5 +36,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cloudflare-cache-
       
+      - name: Clear old rules
+        run: python -m src leave
+
       - name: Cloudflare Gateway Zero Trust 
         run: python -m src run
