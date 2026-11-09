@@ -1,2 +1,6 @@
 # connect.facebook.net
-api-js.datadome.co
+# api-js.datadome.co
+gz.gov.cn
+ngabbs.com
+ali213.net
+bbs.nga.cn
